@@ -1,19 +1,25 @@
-import React from 'react'
+import { Metadata } from "next"
 
-const VehicleType = ({ params }: VehicleTypeProps) => {
+export const generateMetadata = ( { params }: Props ): Metadata =>{
+	return {
+		title: `Vehicles | ${params.typeName}`
+	}
+}
+
+const VehicleType = ({ params }: Props) => {
     return (
 		<div>
 			<h1>VehicleType {params.typeName}</h1>
 			<ul>
-				<li>{params.typeName} 1</li>
-				<li>{params.typeName} 2</li>
-				<li>{params.typeName} 3</li>
+				<li>{params.typeName} vehicle 1</li>
+				<li>{params.typeName} vehicle 2</li>
+				<li>{params.typeName} vehicle 3</li>
 			</ul>
 		</div>
     )
 }
 
-interface VehicleTypeProps{
+type Props = {
 	params: {
 		typeName: string
 	}
