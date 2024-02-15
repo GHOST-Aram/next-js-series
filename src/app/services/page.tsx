@@ -9,7 +9,7 @@ const Pages = () => {
     const random = generateRandomNumber(2)
 
     if(random === 1)
-      throw new Error('Random number too low.')
+      throw new Error('Error Loading Services')
 
     
   return (
