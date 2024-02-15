@@ -1,9 +1,13 @@
-import React from 'react'
+import { notFound } from 'next/navigation'
 
 const HomeDetails = ({ params }: HomeParams) => {
-  return (
-    <div>HomeDetails { params.homeId }</div>
-  )
+
+    if(Number(params.homeId) && Number(params.homeId) > 1000){
+        return notFound()
+    }
+    return (
+        <div>HomeDetails { params.homeId }</div>
+    )
 }
 
 interface HomeParams{
