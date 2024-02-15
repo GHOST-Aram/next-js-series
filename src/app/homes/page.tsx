@@ -1,4 +1,7 @@
-import React from 'react'
+export const metadata = {
+    title: 'Homes',
+    description: 'Listed Homes for Sale'
+}
 
 const Homes = () => {
   return (
